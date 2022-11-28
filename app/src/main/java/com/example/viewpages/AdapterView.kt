@@ -3,6 +3,9 @@ package com.example.viewpages
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import com.example.viewpages.fragment.FirstFragment
+import com.example.viewpages.fragment.SecondFragment
+import com.example.viewpages.fragment.ThirdFragment
 
 class AdapterView(first: FragmentManager): FragmentPagerAdapter(first){
 
@@ -22,9 +25,9 @@ class AdapterView(first: FragmentManager): FragmentPagerAdapter(first){
 
     override fun getPageTitle(position: Int): CharSequence? {
         return when(position){
-            0 -> "First"
-            1 -> "Second"
-            else -> "Third"
+            0 -> "Chat"
+            1 -> "Status"
+            else -> "Panggilan"
         }
     }
 }
