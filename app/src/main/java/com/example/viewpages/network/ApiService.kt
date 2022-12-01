@@ -20,5 +20,4 @@ object ApiService{
                 .build()
             return retrofit.create((ApiEndpoint::class.java))
         }
-
 }
