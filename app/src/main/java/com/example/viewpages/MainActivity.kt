@@ -44,9 +44,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onResultMovie(responseMovie: MovieResponse) {
-        val hasil = responseMovie.results
-        val h = responseMovie.results
-        mainAdapter.setData(hasil as List<ResultsItem>)
-        runAdapter.setData(h as List<ResultsItem>)
+        val vertical = responseMovie.results
+        val horizontal = responseMovie.results
+        mainAdapter.setData(vertical as List<ResultsItem>)
+        runAdapter.setData(horizontal as List<ResultsItem>)
     }
 }
