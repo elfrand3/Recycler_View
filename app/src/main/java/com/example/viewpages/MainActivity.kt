@@ -2,6 +2,7 @@ package com.example.viewpages
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.viewpages.model.MovieResponse
 import com.example.viewpages.model.ResultsItem
@@ -19,7 +20,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        rv_movie.layoutManager = LinearLayoutManager(this)
+        supportActionBar?.hide()
+        rv_movie.layoutManager = GridLayoutManager(this, 1)
         rv_movie.adapter = mainAdapter
 
         rv_mov.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
