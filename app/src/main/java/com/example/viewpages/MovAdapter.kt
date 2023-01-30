@@ -32,7 +32,8 @@ class MovAdapter (private var listMovie:  ArrayList<ResultsItem>):
         holder.rel.text = data.releaseDate
         Glide.with(holder.itemView)
             .load("https://www.themoviedb.org/t/p/w220_and_h330_face${data.posterPath}")
-            .apply (RequestOptions.overrideOf(150,150)).into(holder.img)
+            .apply (RequestOptions.overrideOf(150,150))
+            .into(holder.img)
 
         holder.itemView.setOnClickListener{
             Toast.makeText(holder.itemView.context, "${data.id}", Toast.LENGTH_SHORT).show()

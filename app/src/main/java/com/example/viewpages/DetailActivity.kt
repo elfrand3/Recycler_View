@@ -40,7 +40,9 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun onResultDetail(detail: ResultsItem?) {
-        Glide.with(this).load("https://image.tmdb.org/t/p/w500/${detail!!.backdropPath}").into(iv_detail_image)
+        Glide.with(this)
+            .load("https://image.tmdb.org/t/p/w500/${detail!!.backdropPath}")
+            .into(iv_detail_image)
         iv_detail_languange.text = detail.originalLanguage
         iv_detail_overview.text = detail.overview
         iv_j.text = detail.title
